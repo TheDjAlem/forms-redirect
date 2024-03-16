@@ -8,8 +8,8 @@
 <body>
   <script>
     // Get the form ID from the URL
-    const pathComponents = window.location.pathname.split('/');
-    const formID = pathComponents[pathComponents.length - 1];
+    const urlParams = new URLSearchParams(window.location.search);
+    const formID = urlParams.get('formID');
 
     if (formID) {
       // Redirect to the Roblox URL with the form ID
@@ -17,7 +17,7 @@
     } else {
       // If no form ID is provided, display an error message or handle it accordingly
       alert("Form ID not provided. Redirecting to the homepage.");
-      window.location.href = 'https://www.roblox.com/games/16764629868/Roblox-Forms';
+      window.location.href = 'https://www.roblox.com/games/16764629868/Roblox-Forms'; // Replace with your homepage URL
     }
   </script>
 </body>
